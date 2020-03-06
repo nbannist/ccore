@@ -1,0 +1,54 @@
+{% comment %}
+Copyright (C) 2020 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+<div class="supplemental-menu">
+    <div class="rvt-dropdown ccore-dropdown">
+        <button
+                class="icon-toggle-menu"
+                data-dropdown-toggle="dropdown-ccore"
+                aria-expanded="false">
+            <span class="rvt-sr-only">Show CCore apps</span>
+            <span aria-hidden="true">
+                <svg
+                        class="toggle-icon toggle-open-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16">
+                    <path
+                            fill="currentColor"
+                            d="M9.41,8l5.29-5.29a1,1,0,0,0-1.41-1.41L8,6.59,2.71,1.29A1,1,0,0,0,1.29,2.71L6.59,8,1.29,13.29a1,1,0,1,0,1.41,1.41L8,9.41l5.29,5.29a1,1,0,0,0,1.41-1.41Z"/>
+                </svg>
+                <svg class="toggle-icon toggle-closed-icon" width="16" height="16" viewBox="0 0 16 16"
+                     fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0" y="0" width="3.5" height="3.5" rx="2"/>
+                    <rect x="6" y="0" width="3.5" height="3.5" rx="2"/>
+                    <rect x="12" y="0" width="3.5" height="3.5" rx="2"/>
+
+                    <rect x="0" y="6" width="3.5" height="3.5" rx="2"/>
+                    <rect x="6" y="6" width="3.5" height="3.5" rx="2"/>
+                    <rect x="12" y="6" width="3.5" height="3.5" rx="2"/>
+
+                    <rect x="0" y="12" width="3.5" height="3.5" rx="2"/>
+                    <rect x="6" y="12" width="3.5" height="3.5" rx="2"/>
+                    <rect x="12" y="12" width="3.5" height="3.5" rx="2"/>
+                </svg>
+            </span>
+        </button>
+        <div
+                class="rvt-dropdown__menu rvt-dropdown__menu--right"
+                id="dropdown-ccore"
+                aria-hidden="true"
+                role="menu"
+        >
+            {% include site/menus/ccore-menu-items.html %}
+        </div>
+    </div>
+    <div class="mobile-ccore-links">
+        <h3 class="rvt-m-tb-md rvt-ts-16 rvt-text-uppercase">CCore</h3>
+        {% include site/menus/ccore-menu-items.html %}
+    </div>
+</div>

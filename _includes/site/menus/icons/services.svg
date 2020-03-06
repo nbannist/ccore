@@ -1,0 +1,8 @@
+<svg class="menu-icon-ccore-services" width="16" height="16" viewBox="0 0 15 15" fill="none"
+     xmlns="http://www.w3.org/2000/svg">
+    <line x1="2.1221" y1="12.5211" x2="8.1221" y2="1.52115" stroke-width="2"/>
+    <line x1="3.5" y1="12" x2="13" y2="12" stroke-width="2"/>
+    <circle cx="3.5" cy="12" r="2" stroke-width="2"/>
+    <circle cx="7" cy="3.5" r="2" stroke-width="2"/>
+    <circle cx="12" cy="12" r="2" stroke-width="2"/>
+</svg>

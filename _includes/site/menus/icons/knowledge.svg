@@ -1,0 +1,10 @@
+<svg class="menu-icon-ccore-knowledge" width="16" height="16" viewBox="0 0 12 16"
+     fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 1C1.5 1 1 2.74434 1 4.8961C1 7.04786 4 10.6429 4 11.7143H5H6" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M6 1C10.5 1 11 2.74434 11 4.8961C11 7.04786 8 10.6429 8 11.7143H7H6"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="4" y1="15" x2="8" y2="15" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6" y1="11" x2="6" y2="6" stroke-width="2" stroke-linecap="round"/>
+    <line x1="5" y1="5" x2="7" y2="5" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,17 @@
+{% comment %}
+Copyright (C) 2020 The Trustees of Indiana University
+SPDX-License-Identifier: BSD-3-Clause
+{% endcomment %}
+
+{% assign documentation = site.documentation | where_exp: "app", "app.startURL != ''" %}
+{% assign docs = documentation | sort: "sortOrder" %}
+
+<div class="ccore-links">
+    {% for doc in docs %}
+    {% capture linkURL %}/{{doc.collection}}/{{doc.name}}{% endcapture %}
+    <a href="{{doc.startURL}}">
+        {% include site/menus/icons/{{doc.name}}.svg %}
+        <span>{{doc.name | capitalize }}</span>
+    </a>
+    {% endfor %}
+</div>

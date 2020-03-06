@@ -30,13 +30,15 @@ $ git remote add upstream https://github.com/indiana-university/ccore.git
 
 ### Prevent changes to upstream CNAME file
 
-If you need to make changes to the CNAME file but don't want it to affect the upstream repo, you can use the `update-index` command in git.
+If you need to make changes to the CNAME file but don't want it to affect the upstream repo, 
+you can use the `update-index` command in git. You probably don't need to do this unless you're trying to make a 
+preview site using your fork on GitHub.com. If you're just editing content and previewing it locally, this part is 
+unnecessary. 
 
 ```
 # This tells git to ignore any local changes to the CNAME file
 $ git update-index --skip-worktree CNAME
 ```
-
 
 The `--skip-worktree` flag will ignore any changes to the file made after it was flagged. It will be read as though it is perpetually up-to-date.
 
@@ -51,11 +53,27 @@ On the command-line, use the following commands:
 
 ```
 # Creates the branch
-$ git checkout -b your_branch_name
+$ git checkout -b your-branch-name
 
 # pushes the branch to the origin remote and tracks it (the '-u' tells git to do the tracking)
-$ git push -u origin your_branch_name
+$ git push -u origin your-branch-name
 ```
+
+## Locally previewing changes to the site
+
+Inside the resulting app directory get the NPM dependencies.
+```shell script
+yarn
+```
+
+Now build and run the app.
+```shell script
+bundle exec jekyll serve
+```  
+
+As long as there are no fatal errors, the app should be [running locally on port 4000](http://localhost:4000).  
+This process, while it won't hot reload your browser, will remake your website and show any errors in the console after 
+each file save. You must reload the page manually in your browser to see any potential changes.
 
 ### Make your changes and commit them to your GitHub repo
 
@@ -64,7 +82,7 @@ $ git push -u origin your_branch_name
 $ git add .
 
 # Commit the changes
-$ git commit -m"<commit message>"
+$ git commit -m"commit message"
 
 # Push changes up to your GitHub version of the branch
 $ git push origin
@@ -83,7 +101,8 @@ fill in a description of the changes, and make the PR by clicking the "Create pu
 
 Now you can make sure everything is as you intended; I usually do a once over to make sure the changes look OK before merging.
 
-#### Preview the changes to the site at https://<your-username>.github.io/ccore
+#### Preview the changes to the site on GitHub
+The preview url would be at https://your-username.github.io/ccore
 
 Once merged, you should be able to preview the changes.
 
@@ -91,7 +110,7 @@ Once merged, you should be able to preview the changes.
 
 Make a branch from your master branch. Select the master branch from the branch drop down. Once the master branch 
 loads, in the same branch dropdown, type a name for a feature branch for the PR. Preferably, it should be in the format 
-of `feature/<change-description>`. 
+of `feature/change-description`. 
 
 Using your new branch make a PR to the upstream develop branch similar to how you did above.
 
@@ -100,6 +119,7 @@ Once created, tell everyone so we can get people to check the code and test it.
 #### Make a PR from upstream develop to upstream master
 
 This PR is a "release" PR so you are creating a branch from `develop` then making a PR into `master` 
-in the `indiana-university/ccore` repo. Name the branch `release/<release-description>`.
+in the `indiana-university/ccore` repo. Name the branch `release/release-description` where 'release-description' 
+describes the changes in a succinct way. E.g., 'feature/dcd-rename'
 
 Once this is reviewed and merged, the site will be updated automatically.  
