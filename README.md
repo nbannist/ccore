@@ -61,7 +61,7 @@ $ git push -u origin your-branch-name
 
 ## Locally previewing changes to the site
 
-Inside the resulting app directory get the NPM dependencies.
+Inside the `app` directory get the NPM dependencies.
 ```shell script
 yarn
 ```
